@@ -1,0 +1,4 @@
+interface:
+  display_name: "写作规范"
+  short_description: "Apply direct, verifiable, low-AI-trace writing standards."
+  default_prompt: "Use $writing-standards to revise this paragraph according to practical writing standards."
