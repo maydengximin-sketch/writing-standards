@@ -4,7 +4,7 @@ This skill distills a public Xiaohongshu post and visible selected comments abou
 
 ## Main Principle
 
-Avoid overusing "不是……而是" / "It is not X, but rather Y" as a default argumentative opener. Directly state what the thing is, instead of first describing what it is not, unless the contrast is necessary for reader understanding.
+Avoid overusing "不是……而是" / "It is not X, but rather Y" as a default argumentative opener. Directly state what the thing is instead of first describing what it is not, unless the contrast is necessary for reader understanding.
 
 ## Comment-Derived Heuristics
 

@@ -1,58 +1,66 @@
 ---
 name: writing-standards
-description: Apply practical writing standards to draft, critique, or revise Chinese and English academic, analytical, and AI-assisted prose. Use when the user asks for 写作规范, 论文写作规范, academic writing rules, essay polishing, AI痕迹 cleanup, clearer argumentation, direct thesis framing, abstract structure, factual support, paragraph logic, or removing unnecessary negative framing such as "不是……而是" / "not X but rather Y".
+description: Apply practical writing standards to draft, critique, or revise Chinese and English academic, analytical, and AI-assisted prose. Use when the user asks for 写作规范, 论文写作规范, academic writing rules, essay polishing, abstract writing, AI痕迹 cleanup, clearer argumentation, paragraph logic, factual support, concise rewriting, direct thesis framing, or removing unnecessary negative framing such as "不是……而是" / "not X but rather Y".
 ---
 
 # 写作规范
 
-## Core Standards
+## Core Principle
 
-Make the writing direct, specific, verifiable, and appropriately restrained. Treat "不迂回立论 / No negative framing" as one core rule: state what the claim is before explaining what it is not.
+Make the writing direct, specific, verifiable, coherent, and appropriately restrained. Prefer a clear positive claim over rhetorical detours. Treat "不迂回立论 / No negative framing" as one core standard: state what the claim is before explaining what it is not.
 
-Read `references/source-notes.md` when the task involves academic prose, abstracts, AI-writing cleanup, or the user wants the rules behind the revision.
+Read `references/revision-playbook.md` when the task involves multi-paragraph revision, academic prose, abstracts, AI-writing cleanup, or the user wants an explanation of the standards applied. Read `references/source-notes.md` only when provenance from the original Xiaohongshu discussion is relevant.
 
-## Workflow
+## Task Router
 
-1. Identify the user's target genre, audience, and register: academic paper, abstract, essay, report, proposal, note, or general explanation.
-2. Extract the positive claim: actor, action, object, mechanism, evidence, and implication.
-3. Remove reflexive contrast frames such as "不是 X, 而是 Y", "并非 X, 而是 Y", "not X but rather Y", "rather than", and "instead of" when X is only a rhetorical warm-up.
-4. Put the claim first. Preserve necessary caveats as later qualifiers, not as the opening move.
-5. Replace broad labels with concrete evidence, examples, data, methods, or observed context when the original sounds generic.
-6. Improve paragraph logic without changing the user's core meaning: reorder claims, smooth transitions, and remove mechanical repetition.
-7. Keep claims verifiable. Do not invent citations, data, methods, or examples; mark missing evidence as a placeholder when needed.
-8. Output the revised text first. Add a brief note only when it helps the user learn the standard applied.
+- **Polish or rewrite**: preserve the user's meaning; improve directness, evidence, cohesion, rhythm, and register.
+- **Diagnose writing**: return the highest-impact issues first, grouped by argument, evidence, structure, style, and AI texture.
+- **Draft from notes**: build a claim-first structure before writing; mark missing evidence rather than inventing it.
+- **Abstract writing**: use the four-sentence inverted-pyramid pattern unless the target venue requires a different structure.
+- **AI trace cleanup**: reduce mechanical transitions, formulaic parallelism, empty intensifiers, and unsupported generalities while keeping the prose natural and precise.
 
-## Standards Checklist
+## Revision Workflow
 
-- Direct argument: begin with the claim, not a negated detour.
-- Evidence support: include facts, examples, data, methods, or concrete observations when available.
-- Accurate restraint: use qualifiers only when they improve precision.
-- Natural cohesion: avoid automatic connector chains such as "首先 / 其次 / 然后 / 综上所述" unless they fit the genre.
-- Human-readable rhythm: mix sentence structures for clarity, not for artificial imperfection.
-- Field fit: preserve the user's discipline, terminology, and intended level of formality.
+1. Identify the genre, audience, language, and expected formality.
+2. Extract the central claim: actor, action, object, evidence, mechanism, and implication.
+3. Put the positive claim first. Move caveats, contrasts, and limitations after the claim unless they are necessary to prevent misunderstanding.
+4. Remove reflexive contrast frames such as "不是 X, 而是 Y", "并非 X, 而是 Y", "not X but rather Y", "rather than", and "instead of" when X is only a rhetorical warm-up.
+5. Replace vague labels with concrete support from the user's material: examples, data, method context, observed cases, or causal mechanisms.
+6. Improve paragraph logic by ordering sentences as claim -> support -> explanation -> implication.
+7. Preserve accuracy. Do not invent citations, data, methods, findings, or examples. Use `[需要证据]` / `[evidence needed]` when support is missing.
+8. Return the revised text first unless the user explicitly asks for diagnosis before rewriting.
 
-## Rewrite Patterns
+## Non-Negotiable Standards
 
-Use these transformations as defaults:
+- Keep the user's intended meaning, field, and stance.
+- Prefer concrete nouns and active verbs over abstract filler.
+- Use qualifiers only when they improve accuracy.
+- Avoid automatic connector chains such as "首先 / 其次 / 然后 / 综上所述" unless the genre expects them.
+- Avoid over-polishing into generic, prestige-sounding prose.
+- Keep necessary negative contrast for rebuttal, misconception correction, legal or technical qualification, dialectical argument, literature-gap positioning, or cases where the contrast itself is the evidence.
 
-- `不是 A, 而是 B` -> `B ...`
-- `This is not A, but rather B` -> `This is B ...`
-- `The study does not merely X; it Y` -> `The study Y by/through ...`
-- `Rather than emphasizing X, this paper focuses on Y` -> `This paper focuses on Y ...`
-- `It is important to note that this is not ...` -> delete unless the warning prevents a real misread.
+## Output Contracts
 
-Keep negative contrast when the user is writing rebuttal, legal/technical qualification, misconception correction, dialectical theory, literature-gap positioning, or a sentence where the contrast itself is the evidence.
+For most revisions:
 
-## Output Style
+```text
+Revised:
+...
 
-When editing, return:
+What changed:
+- ...
+```
 
-1. `Revised:` the polished version.
-2. `What changed:` one to three concise bullets, unless the user asks for only the final text.
+For diagnosis:
 
-When drafting abstracts, prefer a four-sentence structure:
+```text
+Top issues:
+1. ...
 
-1. Background plus knowledge gap.
-2. What the work did.
-3. Core finding in the clearest possible form.
-4. Why the finding matters.
+Revision priorities:
+1. ...
+```
+
+For final-only requests, output only the revised text.
+
+For uncertain claims, preserve the claim but flag the uncertainty inline with `[需要证据]` or briefly under `Notes:`.
